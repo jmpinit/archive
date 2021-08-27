@@ -1,0 +1,5 @@
+pyyaml == 5.4.1
+markdown2 == 2.4.1
+beautifulsoup4 == 4.9.3
+chevron == 0.14.0
+python-slugify == 5.0.2
