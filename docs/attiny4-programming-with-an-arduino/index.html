@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   ATtiny4 Programming with an Arduino
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    ATtiny4 Programming with an Arduino
+   </h1>
+   <p>
+    <img alt="" src="media/tiny_success.jpg"/>
+   </p>
+   <p>
+    Arduinos
+    <a href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/ArduinoISP">
+     can be used to program AVR
+microcontrollers
+    </a>
+    .
+I had some fun soldering an ATtiny4 microcontroller, which is a tiny 6 legged
+SOT23-6 package, onto a piece of perf board so I could connect it to an
+Arduino. The very small ATtiny microcontrollers don't use the regular ISP
+protocol that the other AVR chips use.  They use the Tiny Programming Interface
+instead. Thankfully
+    <a href="http://junkplusarduino.blogspot.com/p/attiny10-resources.html">
+     someone has implemented it for
+Arduino
+    </a>
+    so I
+was still able to get it programmed.
+   </p>
+   <p>
+    <em>
+     Done in undergrad
+    </em>
+   </p>
+  </div>
+ </body>
+</html>

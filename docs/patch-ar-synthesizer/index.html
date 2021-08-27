@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Patch - AR Synthesizer
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Patch - AR Synthesizer
+   </h1>
+   <p>
+    <img alt="" src="media/COosH2PUkAIu-9D.jpg"/>
+   </p>
+   <p>
+    Patch was meant to be a hardware modular synthesizer which emulated multiple
+synthesizer modules and exposed an AR interface for patching them together with
+physically simulated patch cables. A QR code stuck to the surface of the PCB
+would lead to a website hosting a JavaScript web app that rendered the
+augmented reality layer over the device by tracking the QR code with the camera
+on the user's device.
+   </p>
+   <p>
+    The user would be presented with a virtual module bank where they could arrange
+modules from a library. By dragging their device around while holding a button
+on the screen they would be able to connect the modules with virtual patch
+cables.
+   </p>
+   <p>
+    Behind the scenes the application would serialize a description of the modules
+the user selected and how the user connected them and then send that data to
+the actual Patch synthesizer device. Then the microprocessor on the device
+would do DSP to simulate the modules and generate audio out the onboard
+headphone jack.
+   </p>
+   <p>
+    A key feature was that once the user had patched together the modules to their
+liking they would be stored on the device itself. So it could be configured and
+then used as a standalone pocket portable musical instrument.
+   </p>
+   <p>
+    I designed and fabricated the PCB but got bogged down in programming the DSP
+code on the AVR microprocessor I used. It was overly ambitious but a project
+where I learned a lot.
+   </p>
+   <p>
+    <img alt="" src="media/handheld-synthesizer-with-augmented-reality-interface.png"/>
+   </p>
+   <p>
+    <em>
+     Made in 2015
+    </em>
+   </p>
+  </div>
+ </body>
+</html>

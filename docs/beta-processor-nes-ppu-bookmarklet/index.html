@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Beta Processor NES PPU Bookmarklet
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Beta Processor NES PPU Bookmarklet
+   </h1>
+   <p>
+    The Beta was a made-up processor used for teaching undergraduate computer
+science at MIT. Students in the Computation Structures class (6.004) were
+required to build an implementation from scratch out of logic gates and
+implement an operating system for it by the end of the class. It was one of my
+favorite classes at MIT, because I love programming constrained systems and
+found it fascinating and satisfying to build up a computer system from scratch.
+   </p>
+   <p>
+    I became preoccupied with building extensions for the Beta to allow it to be
+used for graphics experiments. The simulator we used for class ran as a web
+application, so I wrote a bookmarklet which was able to monkey-patch the
+simulator code and add a NES-like screen for simple graphics:
+   </p>
+   <p>
+    <img alt="" src="media/bhack-tv_fast.gif"/>
+   </p>
+   <p>
+    The code can be found on
+    <a href="https://github.com/jmptable/beta_nes">
+     GitHub
+    </a>
+    .
+   </p>
+   <p>
+    I also
+    <a href="https://github.com/jmptable/gamma">
+     wrote an emulator in C for the Beta, which I called
+Gamma
+    </a>
+    . It was supposed to provide
+    <a href="https://en.wikipedia.org/wiki/Color_Graphics_Adapter">
+     CGA-style graphics
+    </a>
+    and
+8 bit PCM sound like an old computer system, but I only got around to
+implementing the latter. The emulator design has a few interesting attributes.
+Lua can be used to load programs and run code every time an instruction is
+executed, which is convenient for testing, debugging, and prototyping UI during
+development. It also implements a simple text console in the bottom of the
+window and keyboard interrupts.
+   </p>
+  </div>
+ </body>
+</html>

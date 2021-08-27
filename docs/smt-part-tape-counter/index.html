@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   SMT Part Tape Counter
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    SMT Part Tape Counter
+   </h1>
+   <p>
+    <img alt="" src="media/smt parts counter.jpeg"/>
+   </p>
+   <p>
+    I wanted to get a handle on my Digikey SMT part cruft, but didn't want to count
+the parts by eye. Built a simple 3D-printed sensor block with a break-beam
+sensor that I can easily slide the SMT part tape through and hooked it up to a
+simple Arduino shield with two buttons and a 3 digit 7-seg display. The right
+button resets the count and the left button sets the number of parts/hole on
+the tape.
+   </p>
+   <p>
+    I was lazy hooking up the 7-segs and put a current-limiting resistor per digit
+on the low-side, so the brightness changes depending on how many segments are
+lit up. Still legible and saved me having to add MOSFETs or something to sink
+the current.
+   </p>
+   <p>
+    <img alt="" src="media/sensor.jpeg"/>
+   </p>
+   <p>
+    <video alt="" autoplay controls src="media/IMG_0664.mp4"/>
+   </p>
+  </div>
+ </body>
+</html>

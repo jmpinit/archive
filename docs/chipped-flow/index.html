@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Chipped Flow
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Chipped Flow
+   </h1>
+   <p>
+    I have a bazillion DIP chips because years ago a hackerspace was shutting down
+and was going to throw out their large collection. I took it off their hands
+and have been lugging it around ever since.
+   </p>
+   <p>
+    After coming across it in my studio junk I started thinking about quick projects
+that I could do with the parts. I thought it might be fun to lay them out using
+a generative system in
+    <a href="https://www.sidefx.com/">
+     Houdini
+    </a>
+    . The exercise turned
+into an exploration of different packing methods. Also I made a little
+procedural DIP chip generator asset in Houdini which was fun.
+   </p>
+   <ol>
+    <li>
+     Convert a baby face to topographical lines
+    </li>
+    <li>
+     Generate ribbons wider than the DIP chips along the lines
+    </li>
+    <li>
+     Use the
+     <a href="https://www.sidefx.com/docs/houdini/nodes/sop/uvlayout.html">
+      UV Layout
+     </a>
+     geo node to pack DIP chips into the ribbons.
+    </li>
+   </ol>
+   <p>
+    Tada:
+   </p>
+   <p>
+    <img alt="" src="media/Screenshot 2021-07-24 152446.png"/>
+   </p>
+   <p>
+    Same method but with lines generated from a noise function:
+   </p>
+   <p>
+    <img alt="" src="media/Screenshot 2021-07-24 203302.png"/>
+   </p>
+   <p>
+    An interesting failure along the way (using point relax):
+   </p>
+   <p>
+    <img alt="" src="media/Screenshot 2021-07-24 202404.png"/>
+   </p>
+   <p>
+    Here was a different approach using a packing method that I learned from
+    <a href="https://www.youtube.com/watch?v=wLgeQUGywaQ">
+     this Entagma tutorial video
+    </a>
+    on a
+3D model of my head.
+   </p>
+   <p>
+    <img alt="" src="media/render2.png"/>
+   </p>
+  </div>
+ </body>
+</html>

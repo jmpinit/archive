@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Automatic Spray Paint Can
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Automatic Spray Paint Can
+   </h1>
+   <p>
+    <img alt="" src="media/autospraygun_test0_magma.png"/>
+   </p>
+   <p>
+    I was playing around with the Vive lighthouse tracking system for VR and
+started thinking about hardware projects to use it for. One idea I had was to
+take an image and print it onto a wall by using the tracking system to sense
+where a spray paint can was and then cause it to spray paint depending on the
+color in the virtual image at the location where the spray paint can was.
+   </p>
+   <p>
+    I built a simple rig with a solenoid and some 3D printed and laser cut parts to
+create a mechanism that could trigger the spray paint can. A BeagleBone single
+board computer was used to communicate over WiFi back to the computer that was
+actually connected to the lighthouse tracking system and running code to decide
+when to trigger the spray paint can.
+   </p>
+   <p>
+    It didn't work particularly well because the code didn't take into account the
+build-up of the paint as it sprayed, and it didn't attempt to use the orientation
+of the spray paint can to decide which pixel in the image it was in front of.
+If I were going to go back and work on this more I would cast a ray from the
+spray paint can nozzle to the virtual wall and then sample the pixel at that location
+instead of just projecting the location of the can onto the wall along the vector
+normal to the wall. And I would accumulate "paint" in a texture and fire the spray paint
+can based on the difference between that texture and the desired image so that
+it would shut off after accumulating paint for a short time.
+   </p>
+   <p>
+    Additionally there are many optimizations that one could make taking into account the
+distance of the spray paint can from the wall and the size of the spray spot.
+Ideally a cone would be used instead of a simple ray and it would not allow the
+spray paint can to be fired when it's too far from the wall.
+   </p>
+   <p>
+    The tool would also benefit from a UI able to show the 3D scene from the perspective of the
+spray paint can. Without that kind of feedback it was hard to know whether the
+can wasn't firing because it wasn't working or just because it was over a blank
+portion of the image.
+   </p>
+   <p>
+    <em>
+     Done in 2017
+    </em>
+   </p>
+  </div>
+ </body>
+</html>

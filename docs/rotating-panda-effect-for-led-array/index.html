@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Rotating Panda Effect for LED Array
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Rotating Panda Effect for LED Array
+   </h1>
+   <p>
+    <img alt="" src="media/vlla_sim_panda.gif"/>
+   </p>
+   <p>
+    I was obsessed with the C64 demo
+    <a href="https://youtu.be/L8onlB0F1_A?t=308">
+     We Are New by Fairlight
+    </a>
+    .
+Their disk loading animation in that demo is a panda holding a gun rotating in
+3D. I decided to replicate it for a Very Large LED Array.
+   </p>
+   <p>
+    <img alt="" src="media/panda1.png"/>
+    <img alt="" src="media/panda2.png"/>
+    <img alt="" src="media/panda3.png"/>
+    <img alt="" src="media/panda4.png"/>
+   </p>
+   <p>
+    From a video of the demo I redrew the panda from the front, back, left, and
+right perspectives. Then in Processing I wrote a very simple voxel rendering
+engine and used the images to generate the voxels for the panda. I had written
+a library for the LED array to be able to stream it graphics over UDP so once I
+had the panda effect done I used that to get it up on the array.
+   </p>
+   <p>
+    <img alt="" src="media/the_vlla.jpg"/>
+   </p>
+   <p>
+    <em>
+     Done while in undergrad
+    </em>
+   </p>
+  </div>
+ </body>
+</html>

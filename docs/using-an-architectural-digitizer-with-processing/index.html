@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Using an Architectural Digitizer with Processing
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Using an Architectural Digitizer with Processing
+   </h1>
+   <p>
+    <img alt="" src="media/project_digitizer_proto.jpg"/>
+   </p>
+   <p>
+    My father is an architect which is how we ended up with an architectural plan
+digitizer device gathering dust in our house. I thought it would be fun to use
+as an input device. It had a serial interface but I didn't have the right cables
+so I cracked the enclosure open and connected an Arduino to communicate with it.
+   </p>
+   <p>
+    I didn't have documentation for the protocol that it used but thankfully it
+volunteered data in a simple ASCII format. I made a simple Processing sketch
+which parsed the data and painted a circle wherever I touched the digitizer's
+pen to its surface.
+   </p>
+   <p>
+    <em>
+     Done in high school
+    </em>
+   </p>
+  </div>
+ </body>
+</html>

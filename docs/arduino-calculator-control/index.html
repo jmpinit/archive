@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Arduino Calculator Control
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Arduino Calculator Control
+   </h1>
+   <p>
+    <img alt="" src="media/remote-calc-draw_fast.gif"/>
+   </p>
+   <p>
+    Texas Instruments graphing calculators have a communication port that allow
+them to communicate with external devices. If connected to a computer they can
+be remote controlled from a special TI PC application. This is usually just
+used to transfer files like applications between the PC and the calculator, but
+there is a feature which allows the computer to send keystrokes to remote
+control the calculator.
+   </p>
+   <p>
+    I thought it would be fun to use this protocol to draw images on the calculator
+screen by remote controlling the pen tool in the graph viewer. I implemented
+the calculator command protocol on an Arduino and plugged it into the
+calculator using a cut link cable. On the Arduino I also implemented a simple
+serial protocol so I could send messages to the Arduino from my laptop and they
+would cause keypresses to be sent to the calculator. Then I wrote a small Ruby
+program to take a black and white image and generate the appropriate keypresses
+to draw it on the calculator. It used a flood fill algorithm to plan the path
+for the pen so that it could be moved efficiently (the calculator was slow).
+   </p>
+   <iframe allowfullscreen="" frameborder="0" height="640" src="https://player.vimeo.com/video/325307073?h=02eb3beca3" title="vimeo-player" width="640">
+   </iframe>
+   <p>
+    Find the code here:
+    <a href="https://github.com/jmptable/calc_control">
+     github.com/jmptable/calc_control
+    </a>
+   </p>
+   <p>
+    <em>
+     Done in undergrad
+    </em>
+   </p>
+  </div>
+ </body>
+</html>

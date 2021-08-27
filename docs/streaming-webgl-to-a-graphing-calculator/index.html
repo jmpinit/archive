@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Streaming WebGL to a Graphing Calculator
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Streaming WebGL to a Graphing Calculator
+   </h1>
+   <p>
+    <img alt="" src="media/tumblr_ntmi4hiGCT1tg3dkzo1_r1_400.gif"/>
+   </p>
+   <p>
+    A product of hardcore procrastination:
+   </p>
+   <p>
+    I connected my calculator to my PC via its link port (using an Arduino to
+translate) and wrote some highly optimized Z80 assembly code to let me stream 1 
+bit video to it. And then I wrote some JavaScript to use WebGL to render a
+rotating 3D scan of me sitting in a chair at my desk and to stream the texture
+to the calculator over my optimized communications interface.
+   </p>
+   <p>
+    <div style="padding:56.25% 0 0 0;position:relative;">
+     <iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" frameborder="0" src="https://player.vimeo.com/video/137216358?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=cd4fbe4cdc" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Streaming WebGL to a TI-83 Plus Calculator">
+     </iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js">
+    </script>
+   </p>
+  </div>
+ </body>
+</html>

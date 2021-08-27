@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   A Tiny Cloud
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    A Tiny Cloud
+   </h1>
+   <p>
+    <img alt="A sketch of a tiny cloud with circuitry inside" src="media/7993381504412417815.png"/>
+   </p>
+   <p>
+    One day I was thinking up silly excuses to use tiny microcontrollers for
+things.  I had been playing with
+    <a href="https://en.wikipedia.org/wiki/TUN/TAP">
+     TUN and TAP
+devices
+    </a>
+    which make it easy to create
+arbitrary network devices using software on Linux. Thinking about the large
+computing power in modern clouds I thought it would be funny to make a cloud
+out of tiny, resource-constrained microcontrollers that worked the same way as
+the big clouds. Kind of like a bunch of kids in a trench coat pretending to be
+an adult, the microcontrollers could pretend to be real cloud hardware over the
+Internet.
+   </p>
+   <p>
+    To make it happen I designed a PCB that held 16 ATtiny4 microcontrollers, which
+each have 512 bytes of flash and 32 bytes of RAM and were set up to run at 8
+MHz. They were connected via a two wire serial interface to an ATmega32U4, which
+has hardware support for USB.
+   </p>
+   <p>
+    <img alt="Front side of the tiny cloud PCB" src="media/assembled-front.jpg"/>
+    <img alt="Back side of the tiny cloud PCB" src="media/assembled-back.jpg"/>
+   </p>
+   <p>
+    The plan was to write a TUN driver which would talk to the ATtinys via the
+ATmega32U4 over USB the ATtinys could send and receive messages via their
+shared serial interface with the ATmega32U4 with very little overhead. Then the
+TUN driver would do most of the heavy lifting to assemble/disassemble IP
+packets and make the device appear to be a collection of 16 legitimate,
+ordinary hosts.
+   </p>
+   <p>
+    Unfortunately I was distracted by other projects before I finished the TUN
+driver.
+   </p>
+  </div>
+ </body>
+</html>

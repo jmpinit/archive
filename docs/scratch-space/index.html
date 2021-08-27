@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Scratch Space
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Scratch Space
+   </h1>
+   <p>
+    Inspired by
+    <a href="https://www.youtube.com/watch?v=MGPg713A_LM">
+     Aphex Twin's Windowlicker
+    </a>
+    I got the idea to make an augmented reality app that would be able to generate
+sounds whose spectrograms would display images taken by the user. After
+generating the sounds it would create the corresponding spectrogram images and
+then render them in augmented reality on discs like records that the user could
+rotate to scratch/scrub to create music.
+   </p>
+   <p>
+    I started building a prototype and got as far as rendering spectrograms on
+textures and creating sounds from arbitrary images. It used Three.js for the 3D
+graphics and the Web Audio API to create and analyze sounds.
+   </p>
+   <p>
+    <img alt="" src="media/Screen Shot 2017-04-16 at 2.58.45 PM.png"/>
+   </p>
+   <p>
+    Once I was able to make spectrograms and make sounds with images hidden in
+their spectrograms I started writing shaders with feedback to visualize the
+time aspect of the audio playback.
+   </p>
+   <p>
+    <img alt="" src="media/just-translating.gif"/>
+   </p>
+   <p>
+    I wanted to have the visuals fade out over time so I started playing with
+scaling effects.
+   </p>
+   <p>
+    <img alt="" src="media/scaling.gif"/>
+   </p>
+   <p>
+    <img alt="" src="media/scaling-down.gif"/>
+   </p>
+   <p>
+    To get the disc effect I wrapped the visuals in a circle and added a diffusion
+effect as a shader with feedback.
+   </p>
+   <p>
+    <video alt="" autoplay controls src="media/spectrovinyl.mp4"/>
+   </p>
+   <p>
+    <a href="https://github.com/jmptable/scratch-space">
+     Code on GitHub
+    </a>
+    .
+   </p>
+   <p>
+    <em>
+     2017
+    </em>
+   </p>
+  </div>
+ </body>
+</html>

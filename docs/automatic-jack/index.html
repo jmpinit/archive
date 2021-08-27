@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   Automatic Jack
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    Automatic Jack
+   </h1>
+   <p>
+    Automatic Jack was the hardware hacker from the pair of hackers in William
+Gibson's Burning Chrome.
+   </p>
+   <blockquote>
+    <p>
+     I was working late in the loft one night, shaving down a chip, my arm off and
+  the little waldo jacked straight into the stump.  The waldo looks like an old
+  audio turntable, the kind that played disc records, with the vise set up under
+  a transparent dust cover. The arm itself is just over a centimeter long,
+  swinging out on what would’ve been the tone arm on one of those turntables.
+  But I don’t look at that when I’ve clipped the leads to my stump; I look at
+  the scope, because that’s my arm there in black and white, magnification 40x.
+  I ran a tool check and picked up the lazer. It felt a little heavy; so I
+  scaled my weight-sensor input down to a quarter-kilo per gram and got to
+  work. At 40x the side of the program looked like a trailer truck.
+    </p>
+   </blockquote>
+   <p>
+    I wanted to make a cheap
+    <a href="https://en.wikipedia.org/wiki/Atomic_force_microscopy">
+     atomic force microscope
+    </a>
+    .
+I had very little idea of what I was doing.
+   </p>
+   <p>
+    The system architecture concept was to combine several cheap and common items
+to bootstrap to atomic resolution. A flexure-based XY stage would use Michelson
+interferometers for closed-loop positioning with a resolution of tens of
+nanometers. Z positioning would be handled using a Blu-ray drive head which can
+do submicron positioning using a focus-based optical sensing method. Then a
+tungsten probe on a piezo disk actuator would scan the surface of the sample
+with sub-nanometer resolution.
+   </p>
+   <p>
+    <img alt="" src="media/vcm-driver_board.jpg"/>
+   </p>
+   <p>
+    I designed a VCM driver board for the Z stage. It was my first time soldering
+wafer level packages which was a fun adventure. I also took a leap and used an
+XMEGA microcontroller for the first time on the board. This resulted in
+spending a lot of time just trying to get code flashed.
+   </p>
+   <p>
+    <img alt="" src="media/isp-attempt_small.png"/>
+   </p>
+   <p>
+    <img alt="" src="media/vcm-driver-modded.png"/>
+   </p>
+   <p>
+    <img alt="" src="media/dev-board_small.png"/>
+   </p>
+   <p>
+    Eventually I started a full time job and abandoned this project.
+   </p>
+  </div>
+ </body>
+</html>

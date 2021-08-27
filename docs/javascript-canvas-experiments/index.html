@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <style>
+   .title {
+        text-align: center;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+
+      video {
+        max-width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+      }
+  </style>
+  <title>
+   JavaScript Canvas Experiments
+  </title>
+ </head>
+ <body>
+  <div class="container u-max-full-width">
+   <h1 class="title">
+    JavaScript Canvas Experiments
+   </h1>
+   <h2>
+    Generating Space Invaders
+   </h2>
+   <p>
+    <img alt="" src="media/invaders.png"/>
+   </p>
+   <p>
+    Space invaders are easy and fun to generate randomly. Just generate random
+pixels on one half and then mirror them.
+   </p>
+   <h2>
+    Plasma
+   </h2>
+   <p>
+    <img alt="" src="media/plasma.png"/>
+   </p>
+   <p>
+    Rudimentary
+    <a href="https://en.wikipedia.org/wiki/Plasma_effect">
+     plasma effect demo
+    </a>
+    rendered in ASCII.
+   </p>
+   <h2>
+    Pump Brain
+   </h2>
+   <p>
+    <img alt="" src="media/pumps.png"/>
+   </p>
+   <p>
+    I was obsessed with evolutionary algorithms when I made this. It randomly
+connected nodes into a graph and then the nodes could "pump" liquid between
+them. I took the pump level at certain nodes as the "answer" to evaluate
+against an arbitrary fitness function. And then I varied the layout of the
+networks while evaluating their performance against the fitness function and
+selecting the best performer as the graph layout to base the next generation
+on. It never resulted in any very performant networks, but it was a fun
+experiment.
+   </p>
+   <h2>
+    Spores
+   </h2>
+   <p>
+    <img alt="" src="media/spores.png"/>
+   </p>
+   <p>
+    Spores fall from the sky and grow flowers where they land.
+   </p>
+   <h2>
+    3D Sinewave Surface
+   </h2>
+   <p>
+    <img alt="" src="media/waves.png"/>
+   </p>
+   <p>
+    I made this in high school when I was learning JavaScript. I was interested in
+3D graphics and software renderers so I decided to try to make a simple point
+renderer and do something interesting with it. I ended up drawing this simple
+sinewave landscape from a rotating camera perspective using the simple trig that
+I knew at the time.
+   </p>
+   <p>
+    <em>
+     All made in high school
+    </em>
+   </p>
+  </div>
+ </body>
+</html>
