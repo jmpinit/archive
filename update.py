@@ -74,12 +74,13 @@ def index_project_dir(project_dir, output_path):
             if not image_src_path.exists():
                 raise Exception(f'Image {image_src_path} does not exist')
 
-            image_dest_path = media_path / tag['src']
+            image_name = Path(tag['src']).name
+            image_dest_path = media_path / image_name
 
             shutil.copy(image_src_path, image_dest_path)
 
             # Rewrite the page to reference the image in the output location
-            tag['src'] = f'media/{tag["src"]}'
+            tag['src'] = f'media/{image_name}'
 
         project_page = project_out_path / f'index.html'
         with open(project_page, 'w') as project_page_file:
