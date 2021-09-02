@@ -69,18 +69,25 @@ def index_project_dir(project_dir, output_path):
             media_path.mkdir()
 
         for tag in proj_soup.find_all('img'):
-            image_src_path = project_path / tag['src']
+            media_src_path = project_path / tag['src']
 
-            if not image_src_path.exists():
-                raise Exception(f'Image {image_src_path} does not exist')
+            if not media_src_path.exists():
+                raise Exception(f'Image {media_src_path} does not exist')
 
-            image_name = Path(tag['src']).name
-            image_dest_path = media_path / image_name
+            src_path = Path(tag['src'])
+            media_name = src_path.name
+            media_type = src_path.suffix
+            media_dest_path = media_path / media_name
 
-            shutil.copy(image_src_path, image_dest_path)
+            shutil.copy(media_src_path, media_dest_path)
 
             # Rewrite the page to reference the image in the output location
-            tag['src'] = f'media/{image_name}'
+            tag['src'] = f'media/{media_name}'
+
+            if media_type == '.mp4':
+                tag.name = 'video'
+                tag['autoplay'] = None
+                tag['controls'] = None
 
         project_page = project_out_path / f'index.html'
         with open(project_page, 'w') as project_page_file:
@@ -102,6 +109,11 @@ def main():
     pages = []
     for project_dir in config['project_directories']:
         pages += index_project_dir(project_dir, output_path)
+
+    pages.sort(key=lambda page: page['title'])
+
+    for page in pages:
+        print(f'Created page for {page["title"]}')
 
     # Create the index
     with open('templates/index.html', 'r') as index_template_file:
