@@ -102,7 +102,7 @@ def main():
     with open('config.yml', 'r') as config_file:
         config = yaml.safe_load(config_file)
 
-    output_path = Path() / config['output_dir']
+    output_path = Path() / config['output_directory']
 
     # Create the pages
 
